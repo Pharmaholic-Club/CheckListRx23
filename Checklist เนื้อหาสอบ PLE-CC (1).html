@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="th" class="lock">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Checklist เนื้อหาสอบ PLE-CC</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;700&display=swap">
+<style>
+@property --p{syntax:"<percentage>";inherits:true;initial-value:0%}
+:root{--bg:#eef4f0;--surf:#fff;--ink:#12281d;--mute:#52685b;--line:#d3e0d7;--cb:#9db5a5;--g:#1b6b49;--gs:#e0f1e7;--b:#2a5f9e;--on:#fff;--done:#eaf7ef;--stk:rgba(238,244,240,.82);--h1:#0d4430;--h2:#1f8460;--sh:0 1px 2px rgba(15,60,40,.06),0 10px 28px -14px rgba(15,60,40,.25);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);-webkit-text-size-adjust:100%}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1712;--surf:#14241b;--ink:#e4efe9;--mute:#9bb0a3;--line:#27392e;--cb:#4d6657;--g:#5fc08f;--gs:#1b3828;--b:#7fb2ee;--on:#0b1f15;--done:#17301f;--stk:rgba(12,23,18,.82);--h1:#082a1d;--h2:#14604a;--sh:0 10px 28px -14px #000}}
+:root[data-theme="dark"]{--bg:#0c1712;--surf:#14241b;--ink:#e4efe9;--mute:#9bb0a3;--line:#27392e;--cb:#4d6657;--g:#5fc08f;--gs:#1b3828;--b:#7fb2ee;--on:#0b1f15;--done:#17301f;--stk:rgba(12,23,18,.82);--h1:#082a1d;--h2:#14604a;--sh:0 10px 28px -14px #000}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 110px);scroll-behavior:smooth;background:var(--bg)}
+html.lock{overflow:hidden}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans Thai",Sarabun,Tahoma,sans-serif;line-height:1.65;touch-action:manipulation}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--stk);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);z-index:20}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+#splash{position:fixed;inset:0;z-index:100;display:grid;place-items:center;text-align:center;color:#fff;background:radial-gradient(circle at 30% 20%,#2a9a72,transparent 55%),linear-gradient(160deg,var(--h1),#0a3a29);transition:opacity .55s,visibility .55s}
+#splash.out{opacity:0;visibility:hidden}
+.cap{width:104px;height:104px;transform:rotate(-38deg);animation:spin 1.6s ease-in-out .5s both}
+.cap .a{fill:#fff;animation:l .9s cubic-bezier(.2,.8,.2,1) both}.cap .c{fill:#86e3b6;animation:r .9s cubic-bezier(.2,.8,.2,1) both}
+@keyframes l{from{transform:translateX(-60px);opacity:0}}@keyframes r{from{transform:translateX(60px);opacity:0}}
+@keyframes spin{to{transform:rotate(-38deg) scale(1.06)}}
+.sp-t{font-size:3.4rem;font-weight:700;letter-spacing:.04em;margin-top:14px;line-height:1.2;animation:up .7s .35s both}
+.sp-s{font-size:1.6rem;font-weight:700;letter-spacing:.14em;color:#86e3b6;padding:0 24px;animation:up .7s .5s both}
+.sp-bar{width:min(220px,60vw);height:5px;border-radius:5px;background:rgba(255,255,255,.22);margin:22px auto 0;overflow:hidden}
+.sp-bar i{display:block;height:100%;width:100%;background:#fff;border-radius:5px;transform-origin:left;animation:ld 1.5s cubic-bezier(.4,0,.2,1) both}
+@keyframes ld{from{transform:scaleX(0)}}@keyframes up{from{opacity:0;transform:translateY(10px)}}
+.hero{background:radial-gradient(ellipse at 85% 0,rgba(134,227,182,.35),transparent 55%),linear-gradient(135deg,var(--h1),var(--h2));color:#fff;padding:36px 0 40px;border-radius:0 0 28px 28px}
+h1{font-size:clamp(1.55rem,4.2vw,2.5rem);line-height:1.3;margin:0 0 6px;font-weight:700}
+.sub{margin:0;opacity:.88;max-width:62ch;font-size:clamp(.9rem,2vw,1.02rem)}
+.stk{position:sticky;top:env(safe-area-inset-top,0px);z-index:15;background:var(--stk);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line);margin-top:-14px;padding-top:14px}
+.stk .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;padding-top:8px;padding-bottom:10px}
+.tabs{display:flex;gap:6px;background:var(--gs);padding:4px;border-radius:999px}
+.tab{font:inherit;font-size:.92rem;border:0;background:transparent;color:var(--ink);padding:7px 16px;border-radius:999px;cursor:pointer;font-weight:500;min-height:40px;transition:background .2s,color .2s}
+.tab[aria-selected="true"]{background:var(--g);color:var(--on);box-shadow:0 2px 8px -2px rgba(0,0,0,.3)}
+.prog{flex:1;min-width:240px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pl{display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:3px;color:var(--mute)}
+.bar{height:8px;border-radius:6px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;width:0;transition:width .5s cubic-bezier(.2,.8,.2,1);border-radius:6px}
+.bar.r i{background:var(--g)}.bar.v i{background:var(--b)}
+main{padding-top:18px;padding-bottom:56px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin-bottom:14px}
+.fact{background:var(--surf);border-radius:12px;padding:11px 14px;box-shadow:var(--sh);border-left:4px solid var(--g)}
+.fact b{display:block;font-size:1.05rem;line-height:1.4}.fact span{color:var(--mute);font-size:.84rem;line-height:1.45;display:block}
+.tools{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;margin:0 0 12px}
+.tools button{font:inherit;font-size:.84rem;border:1px solid var(--line);background:var(--surf);color:var(--ink);padding:7px 14px;border-radius:999px;cursor:pointer;min-height:38px;transition:background .15s,transform .1s}
+.tools button:hover{background:var(--gs)}.tools button:active{transform:scale(.96)}
+.tab:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(--b);outline-offset:2px}
+details.grp{background:var(--surf);border-radius:16px;margin-bottom:12px;overflow:hidden;box-shadow:var(--sh);transition:--p .5s}
+summary{display:flex;align-items:center;gap:12px;padding:12px 16px;cursor:pointer;list-style:none;background:linear-gradient(90deg,var(--gs) var(--p,0%),transparent var(--p,0%));min-height:60px;user-select:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";width:9px;height:9px;border:solid var(--mute);border-width:0 2px 2px 0;transform:rotate(45deg);margin:0 4px 4px 4px;transition:transform .2s}
+details:not([open]) summary::after{transform:rotate(-45deg);margin-bottom:0}
+.badge{flex:none;width:38px;height:38px;border-radius:11px;background:var(--gs);color:var(--g);display:grid;place-items:center;font-weight:700;transition:background .3s,color .3s;box-shadow:inset 0 0 0 1.5px var(--g)}
+details:has(.cnt.all) .badge{background:var(--g);color:var(--on)}
+.gt{flex:1;min-width:0}.gt b{display:block;line-height:1.35}.gt small{color:var(--mute)}
+.cnt{font-size:.8rem;font-weight:500;background:var(--gs);color:var(--g);padding:2px 11px;border-radius:999px;white-space:nowrap}
+.cnt.all{background:var(--g);color:var(--on)}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse}
+th{font-size:.76rem;font-weight:500;color:var(--mute);text-align:left;padding:7px 12px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg)}
+th.c,td.c{text-align:center;width:84px}
+td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:middle;transition:background .25s}
+tr:last-child td{border-bottom:0}
+td.code{width:52px;color:var(--mute);font-size:.84rem;white-space:nowrap}
+.hint{color:var(--mute);font-size:.82rem;line-height:1.5}
+td.t{min-width:200px}
+input[type=checkbox]{-webkit-appearance:none;appearance:none;width:28px;height:28px;border:2px solid var(--cb);border-radius:9px;background:var(--surf);cursor:pointer;position:relative;margin:0;vertical-align:middle;transition:background .15s,border-color .15s,transform .12s}
+input[type=checkbox]:active{transform:scale(.88)}
+input.r:checked{background:var(--g);border-color:var(--g)}input.v:checked{background:var(--b);border-color:var(--b)}
+input[type=checkbox]::after{content:"";position:absolute;left:8px;top:2px;width:7px;height:13px;border:solid var(--on);border-width:0 3px 3px 0;transform:rotate(45deg) scale(0);transition:transform .18s cubic-bezier(.3,1.6,.5,1)}
+input[type=checkbox]:checked::after{transform:rotate(45deg) scale(1)}
+.note{width:100%;min-width:130px;font:inherit;font-size:.86rem;border:1px solid var(--line);border-radius:9px;padding:6px 10px;background:var(--bg);color:var(--ink);min-height:38px}
+tr.d1 .t{color:var(--mute)}tr.d2 td{background:var(--done)}tr.d2 .t{color:var(--mute)}
+.hide-done tr.d2{display:none}
+.foot{color:var(--mute);font-size:.8rem;margin-top:20px;text-align:center}
+@media (hover:hover){tbody tr:hover td{background:var(--gs)}}
+@media (max-width:640px){
+.hero{padding:26px 0 32px;border-radius:0 0 22px 22px}
+.tabs{width:100%}.tab{flex:1;padding:7px 8px;font-size:.88rem}
+.prog{min-width:100%}
+.tools{justify-content:flex-start}
+table,thead,tbody{display:block}thead{display:none}
+tr{display:grid;grid-template-columns:40px 1fr 1fr;gap:8px 8px;padding:11px 14px;border-bottom:1px solid var(--line)}
+tr:last-child{border-bottom:0}
+td,td.c,td.code{display:block;padding:0;border:0;width:auto;text-align:left;background:none!important}
+td.code{grid-column:1;grid-row:1}td.t{grid-column:2/4;grid-row:1;min-width:0}
+td.c{grid-row:2;display:flex;align-items:center;gap:9px;font-size:.86rem;color:var(--mute)}
+td.c:nth-child(3){grid-column:2}td.c:nth-child(4){grid-column:3}
+td.c:nth-child(3)::after{content:"อ่านแล้ว"}td.c:nth-child(4)::after{content:"ทบทวน"}
+td:nth-child(5){grid-column:2/4;grid-row:3}
+tr.d2{background:var(--done)}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+@media print{#splash,.stk,.tools,body::before{display:none!important}body{background:#fff;color:#000}.hero{background:none;color:#000;padding:0}.wrap{padding:0}details.grp{break-inside:avoid;box-shadow:none;border:1px solid #bbb}}
+</style>
+</head>
+<body>
+<div id="splash" role="status" aria-label="กำลังโหลด">
+<div>
+<svg class="cap" viewBox="0 0 120 120" aria-hidden="true"><path class="a" d="M60 36H36a24 24 0 0 0 0 48H60Z"/><path class="c" d="M60 36H84a24 24 0 0 1 0 48H60Z"/></svg>
+<div class="sp-t">Rx23</div>
+<div class="sp-s">PASS 100%</div>
+<div class="sp-bar"><i></i></div>
+</div>
+</div>
+<header class="hero"><div class="wrap">
+<h1>Checklist เนื้อหาสอบ PLE-CC</h1>
+<p class="sub">เตรียมสอบความรู้เพื่อขึ้นทะเบียนและรับใบอนุญาตเป็นผู้ประกอบวิชาชีพเภสัชกรรม ตามประกาศศูนย์สอบความรู้ฯ ที่ 5/2566</p>
+</div></header>
+<div class="stk"><div class="wrap">
+<div class="tabs" role="tablist">
+<button class="tab" role="tab" data-t="cc1" aria-selected="true">PLE-CC1 ข้อเขียน</button>
+<button class="tab" role="tab" data-t="cc2" aria-selected="false">PLE-CC2 ทักษะ</button>
+</div>
+<div class="prog">
+<div><div class="pl"><span>อ่านแล้ว</span><span id="rt"></span></div><div class="bar r"><i id="rb"></i></div></div>
+<div><div class="pl"><span>ทบทวนแล้ว</span><span id="vt"></span></div><div class="bar v"><i id="vb"></i></div></div>
+</div>
+</div></div>
+<main class="wrap">
+<div class="facts" id="facts"></div>
+<div class="tools"><button id="theme">โหมดมืด</button><button id="hide">ซ่อนที่ทบทวนแล้ว</button><button id="fold">ย่อทั้งหมด</button><button id="print">พิมพ์ / PDF</button><button id="reset">ล้างสถานะ</button></div>
+<div id="app"></div>
+<p class="foot" id="foot"></p>
+</main>
+<script>
+var K="plecc-checklist-v1";
+var S={};try{S=JSON.parse(localStorage.getItem(K)||"{}")}catch(e){}
+function save(){try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}}
+var tab="cc1";
+var D={
+cc1:[
+["1","Musculoskeletal (Rheumatology)","กระดูกและข้อ",["Osteoarthritis","Osteoporosis","Rheumatoid arthritis","Gout"]],
+["2","Cardiovascular","หัวใจและหลอดเลือด",["Hypertension","Stable heart failure","Coronary artery disease","Dyslipidemias","Venous thromboembolism"]],
+["3","Dermatologic","ผิวหนัง",["Urticaria, angioedema","Superficial fungal infections","Acne","Eczema","Herpes","Wound","Seborrheic dermatitis","Psoriasis"]],
+["4","Endocrine","ต่อมไร้ท่อ",["Diabetes mellitus","Hypothyroidism, hyperthyroidism","Obesity"]],
+["5","Gastrointestinal","ทางเดินอาหาร",["Gastroesophageal reflux disease","Nausea and vomiting","Dyspepsia, peptic ulcer disease","Diarrhea and constipation, hemorrhoid","Stress ulcer disease","Hepatitis B virus","Inflammatory bowel disease"]],
+["6","Hematologic","โลหิตวิทยา",["Anemia","Hemolytic anemia (G6PD deficiency, thalassemia)"]],
+["7","Immunologic","การแพ้และภูมิคุ้มกันวิทยา",["Allergic rhinitis","Hypersensitivity reactions","Systemic lupus erythematosus","การให้วัคซีนสร้างเสริมภูมิคุ้มกันโรคเบื้องต้น ตามระบบ Expanded Program on Immunization (EPI) of Thailand"]],
+["8","Infectious diseases","โรคติดเชื้อ",["HIV infection without opportunistic infections","Parasitic infections (หิด เหา พยาธิ)","Sexually transmitted diseases & vaginitis","Tuberculosis","Upper respiratory tract infections|common cold, flu, pharyngitis, purulent rhinitis, otitis media, sinusitis ฯลฯ","Cystitis (lower urinary tract infection)","Pneumonia"]],
+["9","Neurologic","ระบบประสาท",["Headache (migraine, tension)","Epilepsy, status epilepticus","Pain management","Stroke","Peripheral neuropathy","Parkinson disease","Dementia, Alzheimer’s disease"]],
+["10","Psychiatric","จิตเวช",["Drug and alcohol abuse","Tobacco dependence and cessation","Anxiety / depression","Insomnia"]],
+["11","Pulmonary","ปอด",["Asthma","Chronic obstructive pulmonary disease (COPD)"]],
+["12","Gynaecologic / Genitourinary","ปัสสาวะและสืบพันธุ์",["Dysmenorrhea","Oral contraceptive","Hormonal replacement therapy","Urinary incontinence"]],
+["13","Eye disorder","ตา",["Conjunctivitis","Hordeolum (กุ้งยิง)","Contact lens","ริดสีดวงตา ต้อหิน ต้อกระจก แผลที่ตา"]],
+["14","Oncologic","มะเร็งวิทยา",["Lung cancer","Breast cancer","Cervical cancer","Colon cancer"]],
+["15","Renal","ไต",["Acute kidney injury (AKI)","Chronic kidney diseases (CKD)","Fluid and electrolyte disorder"]],
+["16","ระบบอื่น","กฎหมาย",["กฎหมาย (Law)|ข้อสอบด้านกฎหมายไม่น้อยกว่า 12 ข้อ จากทั้งหมด 240 ข้อ"]]
+],
+cc2:[
+["1","ด้านวิชาชีพ คุณธรรม จรรยาบรรณ","",["1.2|การปฏิบัติวิชาชีพถูกต้องตามกฎหมาย ระเบียบ"]],
+["2","ด้านการทำงานเป็นทีมและจัดการระบบ","",["2.1|การจัดการระบบที่มีประสิทธิภาพ","2.3|การแก้ไขปัญหาเบื้องต้น"]],
+["3","ด้านสารสนเทศ การสื่อสาร และการให้ความรู้","",["3.1|การจัดการสารสนเทศ","3.2|การสื่อสารที่มีประสิทธิภาพ","3.3|การให้ความรู้"]],
+["4","ด้านเภสัชภัณฑ์ สมุนไพร เภสัชเคมีภัณฑ์ และการควบคุมคุณภาพ","",["4.1|การบูรณาการความรู้ด้านรูปแบบเภสัชภัณฑ์กับการปฏิบัติงาน"]],
+["5","ด้านการจัดหายา และการเตรียมยาสำหรับผู้ป่วยเฉพาะราย","",["5.1|สนับสนุนการจัดหายา เพื่อการให้บริการได้อย่างมีคุณภาพ","5.3|การเตรียมยาสำหรับผู้ป่วยเฉพาะราย","|ระบบยาน้ำใส: ยาสารละลาย ยาน้ำเชื่อม ยาอิลิกเซอร์","|ระบบกระจายตัว: ยาแขวนตะกอน ยาอิมัลชัน ยาครีม ยาขี้ผึ้ง ยาเจล","|การเจือจางน้ำยาฆ่าเชื้อ (antiseptic solution)","|การเจือจางยาให้มีความแรงตามที่กำหนด สำหรับผู้ป่วยเฉพาะราย / ผู้ป่วยเด็ก","|การเตรียมยาของเหลวโดยเติมกระสายยาลงในยาผง (reconstitution)"]],
+["6","ด้านการบริบาลทางเภสัชกรรมเบื้องต้น และการใช้สมุนไพร","",["6.1|การดูแลผู้ป่วย","6.2|การประเมินคำสั่งใช้ยา","6.3|กระบวนการจ่ายยา และการส่งมอบยา","6.4|การส่งเสริมการใช้ยาอย่างเหมาะสม","6.6|การจัดการอาการไม่พึงประสงค์จากการใช้ยา"]],
+["7","ด้านระบบสาธารณสุข และระบบสุขภาพ","",["7.3|ระบบการคุ้มครองผู้บริโภคด้านยาและสุขภาพ"]]
+]};
+var F={
+cc1:[["240 ข้อ","ปรนัย 5 ตัวเลือก คำตอบที่ดีที่สุดข้อเดียว"],["2 วัน","2 ชุด ชุดละ 120 ข้อ ชุดละ 3 ชั่วโมง"],["50 : 40 : 10","Care : Sci : SAP"]],
+cc2:[["14 สถานี","สถานีละ 4 นาที (เชื่อมโยง 2 สถานีต่อเนื่อง 8 นาทีได้)"],["ผู้ป่วย 7–8 ข้อ","ปฏิบัติทักษะ ซักถาม โต้ตอบ ให้คำแนะนำ"],["ผลิตภัณฑ์ 6–7 ข้อ","ประเมินด้วย checklist โดยอาจารย์ผู้ประเมิน"],["กฎหมายและจรรยาบรรณ ~1 ข้อ","บูรณาการกับข้อสอบด้านผู้ป่วยหรือผลิตภัณฑ์"]]
+};
+var app=document.getElementById("app");
+function rowsHtml(g){var h="",n=0;g[3].forEach(function(s){var p=s.split("|"),code,text,hint="";
+if(tab==="cc1"){n++;code=g[0]+"."+n;text=p[0];hint=p[1]||""}
+else if(p.length>1){code=p[0]?g[0]+"."+p[0].split(".")[1]:"";text=p[1]}else{text=p[0]}
+var id=tab+"-"+g[0]+"-"+g[3].indexOf(s);
+if(tab==="cc2"&&!p[0]){h+='<tr data-id="'+id+'" class="sub"><td class="code"></td><td class="t"><span class="hint">• '+text+'</span></td><td class="c"><input type="checkbox" class="r" data-k="r" aria-label="อ่านแล้ว"></td><td class="c"><input type="checkbox" class="v" data-k="v" aria-label="ทบทวนแล้ว"></td><td><input type="text" class="note" data-k="n" placeholder="วันที่ / หมายเหตุ"></td></tr>';return}
+h+='<tr data-id="'+id+'"><td class="code">'+code+'</td><td class="t">'+text+(hint?'<div class="hint">'+hint+'</div>':"")+'</td><td class="c"><input type="checkbox" class="r" data-k="r" aria-label="อ่านแล้ว"></td><td class="c"><input type="checkbox" class="v" data-k="v" aria-label="ทบทวนแล้ว"></td><td><input type="text" class="note" data-k="n" placeholder="วันที่ / หมายเหตุ"></td></tr>'});
+return h}
+function render(){
+document.getElementById("facts").innerHTML=F[tab].map(function(f){return '<div class="fact"><b>'+f[0]+'</b><span>'+f[1]+'</span></div>'}).join("");
+app.innerHTML=D[tab].map(function(g,i){return '<details class="grp" open data-g="'+i+'"><summary><span class="badge">'+g[0]+'</span><div class="gt"><b>'+g[1]+'</b>'+(g[2]?'<small>'+g[2]+'</small>':"")+'</div><span class="cnt" id="c'+i+'"></span></summary><div class="tw"><table><thead><tr><th>#</th><th>หัวข้อ</th><th class="c">อ่านแล้ว</th><th class="c">ทบทวน</th><th>หมายเหตุ / วันที่อ่าน</th></tr></thead><tbody>'+rowsHtml(g)+'</tbody></table></div></details>'}).join("");
+app.querySelectorAll("tr[data-id]").forEach(function(tr){var s=S[tr.dataset.id]||{};
+tr.querySelector('[data-k="r"]').checked=!!s.r;tr.querySelector('[data-k="v"]').checked=!!s.v;tr.querySelector('[data-k="n"]').value=s.n||""});
+document.getElementById("foot").textContent=tab==="cc1"?"ที่มา: ภาคผนวก 1 กลุ่มโรคและโรคย่อยของการจัดสอบ PLE-CC1 (16 กลุ่ม)":"ที่มา: ภาคผนวก 2 เกณฑ์มาตรฐาน 7 มิติของการจัดสอบ PLE-CC2";
+upd()}
+function upd(){var T=0,R=0,V=0;
+D[tab].forEach(function(g,i){var trs=app.querySelectorAll('details[data-g="'+i+'"] tr[data-id]'),t=0,r=0,v=0;
+trs.forEach(function(tr){var s=S[tr.dataset.id]||{};t++;if(s.r)r++;if(s.v)v++;tr.className=(tr.classList.contains("sub")?"sub ":"")+(s.r&&s.v?"d2":s.r?"d1":"")});
+T+=t;R+=r;V+=v;var c=document.getElementById("c"+i);c.textContent=r+"/"+t;c.className="cnt"+(r===t?" all":"")});
+document.getElementById("rt").textContent=R+"/"+T+" ("+Math.round(R/T*100)+"%)";
+document.getElementById("vt").textContent=V+"/"+T+" ("+Math.round(V/T*100)+"%)";
+document.getElementById("rb").style.width=(R/T*100)+"%";document.getElementById("vb").style.width=(V/T*100)+"%"}
+app.addEventListener("input",function(e){var el=e.target,tr=el.closest("tr[data-id]");if(!tr)return;
+var s=S[tr.dataset.id]||(S[tr.dataset.id]={}),k=el.dataset.k;s[k]=k==="n"?el.value:el.checked;save();if(k!=="n")upd()});
+document.querySelectorAll(".tab").forEach(function(b){b.addEventListener("click",function(){tab=b.dataset.t;
+document.querySelectorAll(".tab").forEach(function(x){x.setAttribute("aria-selected",x===b)});render()})});
+document.getElementById("print").addEventListener("click",function(){app.querySelectorAll("details").forEach(function(d){d.open=true});window.print()});
+var rb=document.getElementById("reset"),rt;
+rb.addEventListener("click",function(){if(rb.dataset.c){S={};save();rb.textContent="ล้างสถานะ";delete rb.dataset.c;clearTimeout(rt);render()}
+else{rb.dataset.c=1;rb.textContent="กดอีกครั้งเพื่อยืนยัน";rt=setTimeout(function(){rb.textContent="ล้างสถานะ";delete rb.dataset.c},3000)}});
+render();
+</script>
+<script>
+(function(){
+var root=document.documentElement,sp=document.getElementById("splash"),done=false;
+function dark(){var t=root.getAttribute("data-theme");return t?t==="dark":matchMedia("(prefers-color-scheme: dark)").matches}
+var tb=document.getElementById("theme");
+function lab(){tb.textContent=dark()?"โหมดสว่าง":"โหมดมืด"}
+try{var th=localStorage.getItem("pleTheme");if(th)root.setAttribute("data-theme",th)}catch(e){}
+lab();
+tb.addEventListener("click",function(){var n=dark()?"light":"dark";root.setAttribute("data-theme",n);try{localStorage.setItem("pleTheme",n)}catch(e){}lab()});
+function hide(){if(done)return;done=true;sp.classList.add("out");root.classList.remove("lock");try{sessionStorage.setItem("pleSplash","1")}catch(e){}setTimeout(function(){sp.remove()},700)}
+var seen=false;try{seen=!!sessionStorage.getItem("pleSplash")}catch(e){}
+if(seen){done=true;sp.remove();root.classList.remove("lock")}
+else{var t0=Date.now(),min=matchMedia("(prefers-reduced-motion: reduce)").matches?250:1900;
+function go(){setTimeout(hide,Math.max(0,min-(Date.now()-t0)))}
+if(document.readyState==="complete")go();else addEventListener("load",go);setTimeout(hide,4500)}
+var ap=document.getElementById("app"),hb=document.getElementById("hide"),fb=document.getElementById("fold"),fo=false;
+hb.addEventListener("click",function(){var on=ap.classList.toggle("hide-done");hb.textContent=on?"แสดงที่ทบทวนแล้ว":"ซ่อนที่ทบทวนแล้ว"});
+fb.addEventListener("click",function(){fo=!fo;ap.querySelectorAll("details").forEach(function(d){d.open=!fo});fb.textContent=fo?"ขยายทั้งหมด":"ย่อทั้งหมด"});
+document.querySelectorAll(".tab").forEach(function(b){b.addEventListener("click",function(){fo=false;fb.textContent="ย่อทั้งหมด"})});
+var u0=upd;
+upd=function(){u0();D[tab].forEach(function(g,i){var c=document.getElementById("c"+i);if(!c)return;var p=c.textContent.split("/");c.closest("details").style.setProperty("--p",Math.round(p[0]/p[1]*100)+"%")})};
+upd();
+})();
+</script>
+</body>
+</html>
